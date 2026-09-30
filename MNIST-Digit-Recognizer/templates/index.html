@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MNIST Digit Recognizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="container">
+        <section class="card">
+            <div class="badge">🚀 Mini Project — Week 1</div>
+            <h1>MNIST Digit Recognizer</h1>
+            <p class="subtitle">
+                Draw a digit from <strong>0–9</strong> and let the neural network predict it.
+            </p>
+
+            <div class="workspace">
+                <div class="draw-area">
+                    <canvas id="canvas" width="280" height="280"></canvas>
+
+                    <div class="buttons">
+                        <button id="clearBtn" class="secondary">Clear</button>
+                    </div>
+                </div>
+
+                <div class="result">
+                    <p class="label">Prediction</p>
+                    <div id="prediction">—</div>
+                    <p id="confidence">Draw a digit to begin</p>
+
+                    <div class="bars" id="bars"></div>
+                </div>
+            </div>
+
+            <p id="status" class="status">Ready</p>
+        </section>
+
+        <section class="info">
+            <h2>How it works</h2>
+            <div class="steps">
+                <div><span>1</span><strong>Draw</strong><small>Use the canvas above.</small></div>
+                <div><span>2</span><strong>Preprocess</strong><small>Convert it to a 28×28 MNIST-style image.</small></div>
+                <div><span>3</span><strong>Predict</strong><small>A CNN returns probabilities for 0–9.</small></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
