@@ -1,0 +1,17 @@
+# Python environments
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+
+# Generated model artifacts
+model/*
+!model/.gitkeep
+
+# Editor, OS, secrets
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.env
